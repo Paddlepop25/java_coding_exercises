@@ -44,5 +44,28 @@ public class Main {
 
         // Point
         // don't quite understand, refer to video 80
+
+        // Carpet Cost Calculator
+        Carpet carpet = new Carpet(3.5);
+        Floor floor = new Floor(2.75, 4.0);
+        Calculator carpetCalculator = new Calculator(floor, carpet);
+        System.out.println("Total cost: " + carpetCalculator.getTotalCost());
+        carpet = new Carpet(1.5);
+        floor = new Floor(5.4, 4.5);
+        carpetCalculator = new Calculator(floor, carpet);
+        System.out.println("Total cost: " + carpetCalculator.getTotalCost());
+
+        // Complex Operations
+        ComplexNumber one = new ComplexNumber(1.0, 1.0);
+        ComplexNumber number = new ComplexNumber(2.5, -1.5);
+        one.add(1, 1);
+        System.out.println("one.real = " + one.getReal());
+        System.out.println("one.imaginary = " + one.getImaginary());
+        one.subtract(number);
+        System.out.println("one.real = " + one.getReal());
+        System.out.println("one.imaginary = " + one.getImaginary());
+        number.subtract(one);
+        System.out.println("number.real = " + number.getReal());
+        System.out.println("number.imaginary = " + number.getImaginary());
     }
 }
