@@ -67,5 +67,49 @@ public class Main {
         number.subtract(one);
         System.out.println("number.real = " + number.getReal());
         System.out.println("number.imaginary = " + number.getImaginary());
+
+        // Cylinder
+        Circle circle = new Circle(3.75);
+        System.out.println("circle radius: " + circle.getRadius());
+        System.out.println("circle area: " + circle.getArea());
+        Cylinder cylinder = new Cylinder(5.55, 7.25);
+        System.out.println("cylinder radius: " + cylinder.getRadius());
+        System.out.println("cylinder radius: " + cylinder.getHeight());
+        System.out.println("cylinder area: " + cylinder.getArea());
+        System.out.println("cylinder radius: " + cylinder.getVolume());
+
+        // Pool Area
+        Rectangle rectangle = new Rectangle(5, 10);
+        System.out.println("rectangle width: " + rectangle.getWidth());
+        System.out.println("rectangle length: " + rectangle.getLength());
+        System.out.println("rectangle area: " + rectangle.getArea());
+        Cuboid cuboid = new Cuboid(5, 10, 5);
+        System.out.println("cuboid width: " + cuboid.getWidth());
+        System.out.println("cylinder length: " + cuboid.getLength());
+        System.out.println("cuboid area: " + cuboid.getArea());
+        System.out.println("cuboid radius: " + cuboid.getHeight());
+        System.out.println("cuboid radius: " + cuboid.getVolume());
+
+        // Bedroom: Composition Coding Exercise 37
+        WallVideo37 wall1 = new WallVideo37("North");
+        WallVideo37 wall2 = new WallVideo37("East");
+        WallVideo37 wall3 = new WallVideo37("South");
+        WallVideo37 wall4 = new WallVideo37("West");
+
+        Ceiling ceiling = new Ceiling(12, 55);
+        Bed bed = new Bed("Modern", 4, 3, 2, 1);
+        Lamp lamp = new Lamp("Classic", false, 75);
+        Bedroom bedroom = new Bedroom("Linda", wall1, wall2, wall3, wall4, ceiling, bed, lamp);
+        bedroom.makeBed();
+        bedroom.getLamp().turnOn();
+
+        // Encapsulation: Coding Exercise 38
+        Printer printer = new Printer(50, true);
+        System.out.println(printer.addToner(50));
+        System.out.println("initial page count = " + printer.getPagesPrinted());
+        int pagesPrinted = printer.printPages(9);
+        System.out.println("Pages printed was " + pagesPrinted + " and new total print count = " + printer.getPagesPrinted());
+        pagesPrinted = printer.printPages(2);
+        System.out.println("Pages printed was " + pagesPrinted + " and new total print count = " + printer.getPagesPrinted());
     }
 }
