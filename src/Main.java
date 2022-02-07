@@ -111,5 +111,42 @@ public class Main {
         System.out.println("Pages printed was " + pagesPrinted + " and new total print count = " + printer.getPagesPrinted());
         pagesPrinted = printer.printPages(2);
         System.out.println("Pages printed was " + pagesPrinted + " and new total print count = " + printer.getPagesPrinted());
+
+        // Polymorphism: Coding Exercise 39
+        Car car = new Car(8, "Base car");
+        System.out.println(car.startEngine());
+        System.out.println(car.accelerate());
+        System.out.println(car.brake());
+        Mitsubishi mitsubishi = new Mitsubishi(6, "Outlander VRX 4WD");
+        System.out.println(mitsubishi.startEngine());
+        System.out.println(mitsubishi.accelerate());
+        System.out.println(mitsubishi.brake());
+        Ford ford  = new Ford(6, "Ford Falcon");
+        System.out.println(ford.startEngine());
+        System.out.println(ford.accelerate());
+        System.out.println(ford.brake());
+        Holden holden  = new Holden(6, "Holden Commodore");
+        System.out.println(holden.startEngine());
+        System.out.println(holden.accelerate());
+        System.out.println(holden.brake());
+
+        // Bill's Burgers - Master OOP Challenge
+        Hamburger hamburger = new Hamburger("Basic", "Sausage", 3.56, "White");
+        hamburger.addHamburgerAddition1("Tomato", 0.27);
+        hamburger.addHamburgerAddition2("Lettuce", 0.75);
+        hamburger.addHamburgerAddition3("Cheese", 1.13);
+        hamburger.addHamburgerAddition4("Sauce", 0.3);
+        System.out.println("Total burger price is $ " + hamburger.itemizeHamburger());
+
+        System.out.println();
+        DeluxeBurger deluxeBurger = new DeluxeBurger();
+        deluxeBurger.addHamburgerAddition1("Chips", 2.75); // not allowed
+        System.out.println("Total burger price is $ " +  deluxeBurger.itemizeHamburger());
+
+        System.out.println();
+        HealthyBurger healthyBurger = new HealthyBurger("Impossible", 5.67);
+        healthyBurger.addHealthyAddition1("Egg", 5.43);
+        healthyBurger.addHealthyAddition2("Lentils", 3.41);
+        System.out.println("Total burger price is $ " + healthyBurger.itemizeHamburger());
     }
 }
