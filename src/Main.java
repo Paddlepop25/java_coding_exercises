@@ -148,5 +148,12 @@ public class Main {
         healthyBurger.addHealthyAddition1("Egg", 5.43);
         healthyBurger.addHealthyAddition2("Lentils", 3.41);
         System.out.println("Total burger price is $ " + healthyBurger.itemizeHamburger());
+
+        // Minimum Element
+        System.out.println();
+//        MinimumElement game = new MinimumElement();
+//        game.readInteger();
+//        game.readElements(5);
+//        game.findMin(new int[] {2, -4, 8, -19, 5});
     }
 }
