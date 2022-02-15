@@ -149,11 +149,19 @@ public class Main {
         healthyBurger.addHealthyAddition2("Lentils", 3.41);
         System.out.println("Total burger price is $ " + healthyBurger.itemizeHamburger());
 
-        // Minimum Element
+        // Banking coding exercise 45 (ArrayList, Autoboxing,Unboxing)
         System.out.println();
-//        MinimumElement game = new MinimumElement();
-//        game.readInteger();
-//        game.readElements(5);
-//        game.findMin(new int[] {2, -4, 8, -19, 5});
+        Bank bank = new Bank("National Australia Bank");
+        bank.addBranch("Adelaide");
+
+        bank.addCustomer("Adelaide", "Tim", 50.05);
+        bank.addCustomer("Adelaide", "Mike", 175.34);
+        bank.addCustomer("Adelaide", "Percy", 220.12);
+
+        bank.addCustomerTransaction("Adelaide", "Tim", 44.22);
+        bank.addCustomerTransaction("Adelaide", "Tim", 12.44);
+        bank.addCustomerTransaction("Adelaide", "Mike", 1.56);
+
+        bank.listCustomers("Adelaide", true);
     }
 }
