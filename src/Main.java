@@ -163,5 +163,22 @@ public class Main {
         bank.addCustomerTransaction("Adelaide", "Mike", 1.56);
 
         bank.listCustomers("Adelaide", true);
+
+        // Interface (Coding Exercise 47)
+        // see more testing in InterfacesChallenge - Main.java
+        Player tim = new Player("Tim", 10, 15);
+        System.out.println(tim.toString());
+        tim.setHitPoints(2);
+        tim.setWeapon("Stormbringer");
+        System.out.println(tim.toString());
+
+        // another way to save werewolf using ISaveable type instead of Monster
+        ISaveable werewolf = new Monster("Werewolf", 230, 822);
+        System.out.println("Strength = " + ((Monster) werewolf).getStrength());
+        System.out.println(werewolf);
+
+        Monster frankenstein = new Monster("Frankenstein", 42, 27);
+        System.out.println("Strength = " + frankenstein.getStrength());
+        System.out.println(frankenstein);
     }
 }
