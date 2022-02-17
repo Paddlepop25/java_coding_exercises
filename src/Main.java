@@ -180,5 +180,8 @@ public class Main {
         Monster frankenstein = new Monster("Frankenstein", 42, 27);
         System.out.println("Strength = " + frankenstein.getStrength());
         System.out.println(frankenstein);
+
+        // Playlist - Inner Class (Coding Exercise 48)
+
     }
 }
